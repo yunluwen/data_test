@@ -1,0 +1,64 @@
+##### 测试mysql连通性
+
+##### mysql查询表中的列信息
+select column_name,data_type from information_schema.columns
+where table_schema = 'springboot' and table_name = 'user';
+
+desc 库名.表名;
+
+######   mysql数据使用sqoop导入hbase
+######  注意:执行时需要提前创建hbase表
+./sqoop import -D sqoop.hbase.add.row.key=true
+--connect jdbc:mysql://127.0.0.1:3306/springboot
+--username root --password 123456
+--table USER --columns ID,NAME
+--hbase-create-table
+--hbase-table t_users --column-family info --hbase-row-key ID
+-m 1
+
+#####  Sqoop通过Phoenix 导出Hbase数据到Hive
+
+
+
+insert overwrite table 11111.l_o                                         //检查这条sql是否存在问题
+(id string,job_id int(11),yarn_app_no varchar(50),                       //字段信息不正确
+flink_shutdown_no varchar(200),flink_job_no varchar(200),
+flink_job_url varchar(200),job_start_at datetime,job_stop_at datetime,
+created_at datetime,updated_at datetime)
+select (id string,job_id int(11),yarn_app_no varchar(50),                //这里有问题，怎么多了一个括号
+flink_shutdown_no varchar(200),flink_job_no varchar(200),
+flink_job_url varchar(200),job_start_at datetime,job_stop_at datetime,
+created_at datetime,updated_at datetime) from 11111.l_o_hbase
+
+
+insert overwrite table 11111.log_service_sys_job_flink_runner
+select id,job_id,yarn_app_no,flink_shutdown_no,flink_job_no,
+flink_job_url,job_start_at,job_stop_at,created_at,updated_at
+from 11111.log_service_sys_job_flink_runner_hbase
+
+
+create external table IF NOT EXISTS vvv.log_service_sys_job_hbase
+(name string,id int,uuid string,remark string,type string,
+created_at timestamp,updated_at timestamp,published tinyint)
+STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
+WITH SERDEPROPERTIES ("hbase.columns.mapping"=
+  ":key,info:id,info:uuid,info:remark,info:type,info:created_at,
+  info:updated_at,info:published")TBLPROPERTIES("hbase.table.name" = "vvv_log_service_sys_job")
+
+create table IF NOT EXISTS vvv.log_service_sys_job
+(name string,id int,uuid string,remark string,type string,
+created_at timestamp,updated_at timestamp,published tinyint)
+
+
+sqoop import -D sqoop.hbase.add.row.key=true --connect jdbc:mysql://103.235.226.219:3306/log_service \
+--username root --password 123456 \
+--table sys_job_nginx2hive --columns job_id,file_path,file_format, \
+demo_data,flink_parallel,hive_database,hive_table,hive_offset,columns,created_at,updated_at  \
+--hbase-create-table  \
+--hbase-table vvv_log_service_sys_job_nginx2hive --column-family info --hbase-row-key id \
+-m 1
+
+
+
+
+

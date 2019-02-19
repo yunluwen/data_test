@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+
+    <!--使用反射机制来实现-->
+    <property>
+        <name>collector_new_install_user</name>
+        <value>com.zyh.transformer.mr.nu.StatsUserNewInstallUserCollector</value>
+    </property>
+
+
+
+</configuration>

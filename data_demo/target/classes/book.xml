@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<books>
+
+    <book1 name="深入java虚拟机">
+        <auther>widnyrjc</auther>
+        <time>2016</time>
+    </book1>
+
+    <book2 name="虚拟机" auther="">
+        <auther>rjc</auther>
+        <time>2012</time>
+    </book2>
+
+</books>

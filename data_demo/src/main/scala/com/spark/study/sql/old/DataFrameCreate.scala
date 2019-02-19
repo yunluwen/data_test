@@ -1,0 +1,22 @@
+package com.spark.study.sql.old
+
+import org.apache.spark.{SparkConf, SparkContext}
+import org.apache.spark.sql.SQLContext
+
+/**
+ * @author Administrator
+ */
+object DataFrameCreate {
+  
+  def main(args: Array[String]) {
+    val conf = new SparkConf()
+        .setAppName("DataFrameCreate")  
+    val sc = new SparkContext(conf)
+    val sqlContext = new SQLContext(sc)
+  
+    val df = sqlContext.read.json("hdfs://localhost:9000/students.json")
+    
+    df.show()  
+  }
+  
+}
