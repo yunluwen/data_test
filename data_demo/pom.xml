@@ -152,14 +152,14 @@
       <groupId>org.apache.kafka</groupId>
       <artifactId>kafka_2.11</artifactId>
       <version>1.0.0</version>
-      <!--<exclusions>-->
-        <!--<exclusion>-->
-          <!--<groupId>com.fasterxml.jackson.core</groupId>-->
-          <!--<artifactId>jackson-databind</artifactId>-->
-        <!--</exclusion>-->
-      <!--</exclusions>-->
     </dependency>
 
+    <!--kafka-streams流式处理-->
+    <dependency>
+      <groupId>org.apache.kafka</groupId>
+      <artifactId>kafka-streams</artifactId>
+      <version>1.0.0</version>
+    </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-pool2 -->
     <dependency>
