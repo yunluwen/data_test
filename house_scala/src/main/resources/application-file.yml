@@ -1,0 +1,12 @@
+---
+# multipart config
+
+
+# qiniu
+qiniu:
+  AccessKey: s2_zpj8dz2XxvbWqxbl5rzD1Dt1hBSdqiVgaNg75
+  SecretKey: RZI43EJbuYJa10Qc8bfrRODZeQ_bKwE4c16PxsnM
+  Bucket: gegf
+  cdn:
+    prefix: http://omtagtyxe.bkt.clouddn.com/
+

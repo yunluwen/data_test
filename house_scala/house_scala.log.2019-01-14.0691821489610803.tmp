@@ -1,0 +1,91 @@
+2019-01-16 16:46:23.517  INFO 1317 --- [main] scala.App$class                          : Starting App.class on localhost with PID 1317 (/Users/zhangyunhao/.m2/repository/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.jar started by zhangyunhao in /Users/zhangyunhao/IdeaProjects/house_scala)
+2019-01-16 16:46:23.529  INFO 1317 --- [main] scala.App$class                          : The following profiles are active: db,file
+2019-01-16 16:46:25.462  INFO 1317 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-16 16:46:25.464  INFO 1317 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$43bea4b1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-16 16:46:25.483  INFO 1317 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dynamicDataSourceSpelParser' of type [com.baomidou.dynamic.datasource.spel.DynamicDataSourceSpelParser] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-16 16:46:25.485  INFO 1317 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dynamicDataSourceSpelResolver' of type [com.baomidou.dynamic.datasource.spel.DefaultDynamicDataSourceSpelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-16 16:46:25.492  INFO 1317 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dynamicDatasourceAnnotationAdvisor' of type [com.baomidou.dynamic.datasource.aop.DynamicDataSourceAnnotationAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-16 16:46:25.501  INFO 1317 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$da3033e0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-16 16:46:26.081  INFO 1317 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2019-01-16 16:46:26.110  INFO 1317 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-16 16:46:26.110  INFO 1317 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-01-16 16:46:26.123  INFO 1317 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/zhangyunhao/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-16 16:46:26.253  INFO 1317 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-16 16:46:26.254  INFO 1317 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2581 ms
+2019-01-16 16:46:26.323  INFO 1317 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-16 16:46:26.327  INFO 1317 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet statViewServlet mapped to [/druid/*]
+2019-01-16 16:46:26.333  INFO 1317 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-16 16:46:26.333  INFO 1317 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-16 16:46:26.333  INFO 1317 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
+2019-01-16 16:46:26.334  INFO 1317 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-16 16:46:26.334  INFO 1317 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2019-01-16 16:46:27.183  INFO 1317 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-01-16 16:46:27.184  INFO 1317 --- [main] c.b.d.d.DynamicRoutingDataSource         : 初始共加载 1 个数据源
+2019-01-16 16:46:27.187  INFO 1317 --- [main] c.b.d.d.DynamicRoutingDataSource         : 添加数据源 master 成功
+2019-01-16 16:46:27.188  INFO 1317 --- [main] c.b.d.d.DynamicRoutingDataSource         : 当前的默认数据源是单数据源，数据源名为master
+2019-01-16 16:46:29.121  INFO 1317 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-01-16 16:46:29.359  INFO 1317 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-16 16:46:29.535  INFO 1317 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-01-16 16:46:29.747  INFO 1317 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-01-16 16:46:29.780  INFO 1317 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-01-16 16:46:29.824  INFO 1317 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-01-16 16:46:29.872 ERROR 1317 --- [main] org.apache.catalina.util.LifecycleBase   : Failed to start component [Connector[HTTP/1.1-9999]]
+
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:960) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) [spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at com.zyh.house_scala.SpringBootScalaApplication$.delayedEndpoint$com$zyh$house_scala$SpringBootScalaApplication$1(SpringBootScalaApplication.scala:23) [classes/:na]
+	at com.zyh.house_scala.SpringBootScalaApplication$delayedInit$body.apply(SpringBootScalaApplication.scala:21) [classes/:na]
+	at scala.Function0$class.apply$mcV$sp(Function0.scala:34) [scala-library-2.11.8.jar:na]
+	at scala.runtime.AbstractFunction0.apply$mcV$sp(AbstractFunction0.scala:12) [scala-library-2.11.8.jar:na]
+	at scala.App$$anonfun$main$1.apply(App.scala:76) [scala-library-2.11.8.jar:na]
+	at scala.App$$anonfun$main$1.apply(App.scala:76) [scala-library-2.11.8.jar:na]
+	at scala.collection.immutable.List.foreach(List.scala:381) [scala-library-2.11.8.jar:na]
+	at scala.collection.generic.TraversableForwarder$class.foreach(TraversableForwarder.scala:35) [scala-library-2.11.8.jar:na]
+	at scala.App$class.main(App.scala:76) [scala-library-2.11.8.jar:na]
+	at com.zyh.house_scala.SpringBootScalaApplication$.main(SpringBootScalaApplication.scala:21) [classes/:na]
+	at com.zyh.house_scala.SpringBootScalaApplication.main(SpringBootScalaApplication.scala) [classes/:na]
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_172]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_172]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_172]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_172]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1108) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:550) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:957) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	... 24 common frames omitted
+
+2019-01-16 16:46:29.877  INFO 1317 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-01-16 16:46:29.887  INFO 1317 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-16 16:46:29.889 ERROR 1317 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 9999 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 9999, or configure this application to listen on another port.
+
+2019-01-16 16:46:29.893  INFO 1317 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

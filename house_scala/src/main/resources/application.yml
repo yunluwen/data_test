@@ -1,0 +1,41 @@
+server:
+  port: 9999
+  error:
+    whitelabel:
+      enabled: false   # 不使用Springboot的Error页面
+
+# mybatis plus
+mybatis-plus:
+  type-aliases-package: com.zyh.house_scala.entity
+  configuration.map-underscore-to-camel-case: true
+  configuration.default-fetch-size: 100
+  configuration.default-statement-timeout: 3000
+  mapperLocations: classpath:com/zyh/house_scala/repository/*.xml
+  global-config:
+      db-config:
+        id-type: AUTO
+        table-prefix: sys_     # 数据库表前缀
+
+spring:
+  autoconfigure:
+    exclude:
+      - com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure
+
+  mvc:
+    date-format: yyyy-MM-dd     # 配置日期格式化器，将前端传递的日期格式的数据转化为特定的格式
+
+  profiles:
+    include: db,file
+
+
+
+# 日志：slf4j+logback
+logging:
+  level:
+    com:
+      zyh: trace
+  file: house_scala.log
+
+
+##前端页面修改不用热加载
+#spring.devtools.restart.exclude=templates/**,static/**

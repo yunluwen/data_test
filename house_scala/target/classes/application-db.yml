@@ -1,0 +1,31 @@
+---
+spring:
+  datasource:
+    dynamic:                 # 动态数据源
+      primary: master        # 主数据源
+      druid:
+        initial-size: 5      # 初始化连接池大小
+        max-active: 20       # 最大连接池数量
+        min-idle: 2          # 最小连接池数量
+        max-wait: 60000      # 获取连接时最大等待时间，单位毫秒
+        min-evictable-idle-time-millis: 30000      # 配置一个连接在池中最小生存的时间，单位是毫秒
+        max-evictable-idle-time-millis: 30000      # 配置一个连接在池中最大生存的时间，单位是毫秒
+        time-between-eviction-runs-millis: 60000   # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+        validation-query: select 1                 # 测试连接
+        validation-query-timeout: -1               #
+        test-on-borrow: false
+        test-on-return: false
+        test-while-idle: true                      # 申请连接的时候检测，建议配置为true，不影响性能，并且保证安全性
+        pool-prepared-statements: false            # 是否开启PSCache，PSCache对支持游标的数据库性能提升巨大，oracle建议开启，mysql下建议关闭
+        max-open-prepared-statements: 100
+        filters: stat,wall                         # 配置扩展插件，常用的插件有=>stat:监控统计  log4j:日志  wall:防御sql注入
+        share-prepared-statements: true
+        connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000 # 通过connectProperties属性来打开mergeSql功能;慢SQL记录
+      datasource:
+        master:
+          driver-class-name: com.mysql.jdbc.Driver
+          url: jdbc:mysql://localhost:3306/house?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+          username: root
+          password: 123456
+          schema: classpath:security.sql
+          data: classpath:security-data.sql
